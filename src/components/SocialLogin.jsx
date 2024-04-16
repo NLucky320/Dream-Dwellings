@@ -14,11 +14,12 @@ const SocialLogin = () => {
 	// console.log(location)
 
 	const handleSocialLogin = socialProvider => {
-		      toast('logged in successfully')
+		    
 		socialProvider()
 			.then(result => {
 				if (result.user) {
 					navigate(from)
+					  toast('logged in successfully')
 				// console.log(result.user)
 			}
 			})

@@ -1,7 +1,8 @@
 import React, { createContext, useEffect, useState } from 'react';
 import auth from '../Firebase/Firebase.config';
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile, } from 'firebase/auth';
 import toast from 'react-hot-toast';
+import { Navigate } from 'react-router-dom';
 
 export const AuthContext=createContext(null)
 
@@ -21,19 +22,6 @@ const FirebaseProvider = ({ children }) => {
        return createUserWithEmailAndPassword(auth, email, password)
     }
 
-    //update user profile
-    const updateUserProfile = (name,image) => {
-       return updateProfile(auth.currentUser, {
-            displayName: name,
-            photoURL: image
-}).then(() => {
-  // Profile updated!
-  // ...
-}).catch((error) => {
-  // An error occurred
-  // ...
-});
-    }
 
     // sign in user
     const signInUser = (email, password) => {
@@ -56,7 +44,23 @@ const FirebaseProvider = ({ children }) => {
     const logOut = () => {
         toast('logged out')
         setUser(null)
-    signOut(auth)
+             setLoading(true)
+        signOut(auth)
+        Navigate('/')
+    }
+
+      //update user profile
+    const updateUserProfile = (name,image) => {
+       return updateProfile(auth.currentUser, {
+            displayName: name,
+            photoURL: image
+}).then(() => {
+  // Profile updated!
+  // ...
+}).catch((error) => {
+  // An error occurred
+  // ...
+});
     }
 
     //login user observer
@@ -80,9 +84,9 @@ const FirebaseProvider = ({ children }) => {
         googleLogin,
         githubLogin,
         logOut,
-        updateUserProfile,
         user,
         loading,
+        updateUserProfile,
 }
 
     return (

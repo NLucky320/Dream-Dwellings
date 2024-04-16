@@ -7,7 +7,7 @@ import Root from "../Layout/Root";
 import ErrorPage from "../Pages/ErrorPage";
 import EstatesDetails from "../Pages/EstatesDetails";
 import PrivateRoute from "../components/PrivateRoute";
-import UpdaterProfile from "../Pages/UpdaterProfile";
+import UpdateProfile from "../Pages/UpdateProfile";
 import Blogs from "../Pages/Blogs";
 
 const router = createBrowserRouter([
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/updateProfile",
-        element: <UpdaterProfile></UpdaterProfile>,
+        element: <UpdateProfile></UpdateProfile>,
       },
       {
         path: "/blog",

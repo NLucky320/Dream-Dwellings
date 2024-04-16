@@ -1,30 +1,21 @@
 import React from 'react';
 import useAuth from '../Hooks/useAuth';
 import { Navigate, useLocation } from 'react-router-dom';
-import Loading from './Loading';
+
 
 const PrivateRoute = ({ children }) => {
     const { user, loading } = useAuth();
-    const location = useLocation();
+   const location = useLocation();
+    console.log(location.pathname)
+    if (loading) {
+    return <span className="loading loading-spinner text-primary"></span>
+}
 
-    // If authentication is still in progress, show loading spinner
-    // if (loading) {
-    //     return <Loading />;
-    // }
 
-    // If not loading and user is not authenticated, redirect to login page
-    if (!user) {
-        
-        return <Navigate to="/login" state={  location?.pathname } />;
-    }
-  
-  
-    // If user is authenticated, render the children components
-    return (
-        <div>
-            {children}
-        </div>
-    );
+    if (user) {
+        return children;
+}
+return <Navigate state={location?.pathname} to='/login'> </Navigate>
+ 
 };
-
 export default PrivateRoute;

@@ -12,7 +12,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { Helmet } from 'react-helmet-async';
-
+import image1 from '../assets/shutterstock_1495957673.png'
 const EstatesDetails = () => {
      const [estate, setEstate] = useState([]);
     const { data } = useEstatesData();
@@ -35,10 +35,19 @@ const EstatesDetails = () => {
    
   } = estate|| {};
     return (
-         <Card className="w-full flex-col items-center lg:flex-row my-[50px] gap-4 p-4  mt-[80px]">
-    <Helmet>
+      <section>
+         <Helmet>
               <title>Dream Dwellings | Property details</title>  
-            </Helmet>
+        </Helmet>
+        <div className='w-full  mt-[80px]'>
+<img src={image1} alt="" />
+        </div>
+          <div className='pt-12 max-w-[700px] mx-auto text-center'>
+          <h2 className='text-4xl pb-4'>Estate Details</h2>
+          <p>Discover a lifestyle of unparalleled comfort and sophistication within our meticulously designed homes, crafted to exceed the highest standards of quality and elegance. </p>
+  </div>
+         <Card className="w-full flex-col items-center lg:flex-row my-[50px] gap-4 p-4">
+        
      
             <CardHeader
         shadow={false}
@@ -130,6 +139,7 @@ const EstatesDetails = () => {
     
       </CardBody>
     </Card>
+      </section>
     );
 };
 

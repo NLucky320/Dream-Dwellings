@@ -11,9 +11,19 @@ import useAuth from "../Hooks/useAuth";
 
 const Nav = () => {
   const { logOut, user } = useAuth();
+  console.log(user)
 // console.log(user)
   const [openNav, setOpenNav] = React.useState(false);
- 
+   const handleSignOut = () => {
+    logOut()
+    .then(result => {
+      console.log(result.user)
+    })
+      .catch(error => {
+      console.log(error)
+    })
+  }
+
   React.useEffect(() => {
     window.addEventListener(
       "resize",
@@ -99,9 +109,28 @@ const Nav = () => {
           </Typography>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
-            <div className="flex items-center gap-x-1">
-            
-                    {
+            <div className="flex items-center gap-x-2">
+               {
+                  user ? 
+                    <div className="dropdown dropdown-end">
+                            <label tabIndex={0} className="btn btn-circle avatar ">
+                                <div className="w-10 rounded-full">
+                                    <img src={user?.photoURL || "" } />
+                                </div>
+                            </label>
+                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                <li>
+                                    <button className="btn  bg-[#23BE0A] text-white rounded">{user?.displayName||'user name not found'}</button>
+
+                        </li></ul>
+                        <button onClick={handleSignOut} className="btn bg-[#23BE0A] text-white rounded"> SignOut</button>
+                     
+                    </div>
+                    : <Link to="/login">
+          <button className="btn bg-[#23BE0A] text-white rounded ">Login</button>
+        </Link>
+        }
+                    {/* {
                         user? <div className="dropdown dropdown-end">
                             <label tabIndex={0} className="btn  btn-circle avatar">
                                 <div className="w-10 rounded-full">
@@ -125,7 +154,7 @@ const Nav = () => {
                             <Link to='/login'>
                                 <button className="btn bg-[#23BE0A] text-white rounded">Login</button>
                             </Link>
-                    }
+                    } */}
             </div>
             <IconButton
               variant="text"
