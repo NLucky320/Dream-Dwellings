@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import useAuth from '../Hooks/useAuth';
 import { Helmet } from 'react-helmet-async';
+import toast, { Toaster } from 'react-hot-toast';
 
 const UpdaterProfile = () => {
     const { user, updateUserProfile } = useAuth();
@@ -17,6 +18,7 @@ const UpdaterProfile = () => {
     }, [user]);
 
     const handleChange = (e) => {
+    
         const { name, value } = e.target;
         setFormData((prevData) => ({
             ...prevData,
@@ -25,10 +27,11 @@ const UpdaterProfile = () => {
     };
 
     const handleUpdate = (e) => {
-        e.preventDefault();
+        
         updateUserProfile(formData.name, formData.photoURL)
             .then(() => {
                 console.log('Profile updated successfully');
+                toast('profile updated')
                 // Optionally, you can navigate the user to a different page or show a success message here
             })
             .catch((error) => {
@@ -42,6 +45,7 @@ const UpdaterProfile = () => {
             <Helmet>
                 <title>Dream Dwellings | Update Profile</title>
             </Helmet>
+            <Toaster></Toaster>
             <div className="container flex flex-col items-center justify-center p-4 mx-auto space-y-8 sm:p-10">
                 <h1 className="text-2xl font-bold leading-none text-center sm:text-3xl">Update Your Profile Information</h1>
                 <p>Current Information</p>
@@ -50,10 +54,10 @@ const UpdaterProfile = () => {
                         <img
                             alt=""
                             className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full dark:bg-gray-500"
-                            src={user.photoURL}
+                            src={user?.photoURL}
                         />
-                        <p className="text-xl font-semibold leading-tight">{user.displayName}</p>
-                        <p className="dark:text-gray-600">{user.email}</p>
+                        <p className="text-xl font-semibold leading-tight">{user?.displayName}</p>
+                        <p className="dark:text-gray-600">{user?.email}</p>
                     </div>
                 </div>
                 <div>

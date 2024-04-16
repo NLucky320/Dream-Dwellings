@@ -2,7 +2,7 @@
 const Blog = ({ blog }) => {
     console.log(blog)
     return (
-        <div className="card bg-base h-full p-6 border border-solid border-[#13131326] text-left">
+        <div data-aos="fade-up"  data-aos-duration="3000" className="card bg-base h-full p-6 border border-solid border-[#13131326] text-left">
             <div className='text-center justify-center'>
                 <figure className="pb-4 rounded-lg h-[250px] md:h-[200px] items-center text-center justify-center">
           <img src={blog.image} alt="Shoes" className="rounded-xl h-full w-full items-center text-center" />

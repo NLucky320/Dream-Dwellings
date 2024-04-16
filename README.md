@@ -1,8 +1,18 @@
-# React + Vite
+# Dream Dwellings
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Link
 
-Currently, two official plugins are available:
+Features and Characteristics
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Custom JSON file containing personalized data
+- Use of the useEffect hook for fetching data from an API
+- Efficient state updating within arrays and parameter passing
+- Integration of toast notifications for successful operations and error messages
+- Dynamic routes using React Router for navigation flexibility
+- Firebase Authentication
+
+NPM packages that was used
+
+- AOS Packages
+- React Hook Form
+- Swiper Slider
