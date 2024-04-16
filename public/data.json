@@ -1,0 +1,120 @@
+[
+  {
+      "id": 1,
+      "estate_title": "Spacious Single-Family Home",
+      "segment_name": "Single-family home",
+      "image": "https://i.ibb.co/BnDYhj9/build.png",
+      "description": "A spacious single-family home perfect for a large family.",
+      "price": "$600,000",
+      "status": "sale",
+      "area": "3500 sq ft",
+      "location": "816 Shadyridge Drive Cedar Hill, TX 75104",
+      "facilities": ["4 bedrooms", "3 bathrooms", "Backyard", "Garage"]
+  
+    },
+    {
+      "id": 2,
+      "estate_title": "Modern Townhouse",
+      "segment_name": "Townhouse",
+      "image": "https://i.ibb.co/jWFVxTq/downloa.jpg",
+      "description": "A modern townhouse offering stylish living in an urban setting.",
+      "price": "$450,000",
+      "status": "sale",
+      "area": "2000 sq ft",
+      "location": "123 Main St, Cityville, USA",
+      "facilities": ["3 bedrooms", "2 bathrooms", "Balcony", "Parking"]
+   
+    },
+    {
+      "id": 3,
+      "estate_title": "Luxury Apartment",
+      "segment_name": "Apartment",
+      "image": "https://i.ibb.co/XfQg2t1/download.jpg",
+      "description": "A luxurious apartment with upscale amenities and panoramic views.",
+      "price": "$3,000/month",
+      "status": "rent",
+      "area": "1500 sq ft",
+      "location": "555 Sunny Lane, Family Town, USA",
+      "facilities": ["2 bedrooms", "2 bathrooms", "Gym", "Swimming Pool"]
+     
+    },
+    {
+      "id": 4,
+      "estate_title": "Student Housing Complex",
+      "segment_name": "Student housing",
+      "image": "https://i.ibb.co/1rVYwV0/high.png",
+      "description": "A modern student housing complex providing a conducive environment for studying and socializing.",
+      "price": "$800/month",
+      "status": "rent",
+      "area": "1000 sq ft",
+      "location": "789 Maple St, Suburbia, USA",
+      "facilities": ["Individual bedrooms", "Common kitchen", "Study rooms", "1 bathroom"]
+   
+    },
+    {
+      "id": 5,
+      "estate_title": "Senior Living Community",
+      "segment_name": "Senior living community",
+      "image": "https://i.ibb.co/P6x9Rjp/md.png",
+      "description": "A vibrant senior living community offering comfort, care, and companionship.",
+      "price": "$4,500/month",
+      "status": "rent",
+      "area": "1800 sq ft",
+      "location": "101 University Ave, College Town, USA",
+      "facilities": ["24/7 nursing care", "Social activities", "Dining facilities"]
+
+    },
+    {
+      "id": 6,
+      "estate_title": "Beachfront Vacation Rental",
+      "segment_name": "Vacation rental",
+      "image": "https://i.ibb.co/tB4njhS/img.jpg",
+      "description": "A luxurious beachfront villa perfect for a relaxing getaway.",
+      "price": "$500/night",
+      "status": "rent",
+      "area": "3000 sq ft",
+      "location": "321 Elderly Dr, Retirement City, USA",
+      "facilities": ["Private pool", "Ocean view terrace", "Fully equipped kitchen"]
+ 
+    },
+    {
+      "id": 7,
+      "estate_title": "Historic Single-Family Home",
+      "segment_name": "Single-family home",
+      "image": "https://i.ibb.co/bB50GM5/images2.jpg",
+      "description": "A charming historic single-family home with character and charm.",
+      "price": "$700,000",
+      "status": "sale",
+      "area": "2800 sq ft",
+      "location": "456 Downtown Ave, Metropolis, USA",
+      "facilities": ["3 bedrooms", "2 bathrooms", "Garden", "Fireplace"]
+  
+    },
+    {
+      "id": 8,
+      "estate_title": "Modern Apartment Complex",
+      "segment_name": "Apartment",
+      "image": "https://i.ibb.co/HYbrcHm/modern.png",
+      "description": "A contemporary apartment complex offering urban living at its finest.",
+      "price": "$2,200/month",
+      "status": "rent",
+      "area": "1200 sq ft",
+      "location": "789 Maple St, Suburbia, USA",
+      "facilities": ["1 bedroom", "1 bathroom", "Fitness center", "Rooftop terrace"]
+   
+    },
+    {
+      "id": 9,
+      "estate_title": "Ski Chalet Vacation Rental",
+      "segment_name": "Vacation rental",
+      "image": "https://i.ibb.co/vvZXmgH/single.png",
+      "description": "A cozy ski chalet nestled in the mountains, perfect for winter retreats.",
+      "price": "$600/night",
+      "status": "rent",
+      "area": "2500 sq ft",
+      "location": "777 Ocean Blvd, Paradise Beach, USA",
+      "facilities": ["Hot tub", "Ski-in/ski-out access", "Fireplace"]
+    }
+  
+
+]
