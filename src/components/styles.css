@@ -36,12 +36,76 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient(
+    0deg,
+    rgba(21, 11, 43, 0.9) 0%,
+    rgba(21, 11, 43, 0) 100%
+  );
+}
 .slide1 {
-  background-image: url("../assets/apartment.jpg");
+  background: linear-gradient(
+      0deg,
+      rgba(21, 11, 43, 0.9) 0%,
+      rgba(21, 11, 43, 0) 100%
+    ),
+    url("../assets/apartment.jpg") no-repeat; /* Change the image path accordingly */
+  background-position: center;
+  background-size: cover;
 }
 .slide2 {
-  background-image: url("../assets/md.png");
+  background: linear-gradient(
+      0deg,
+      rgba(21, 11, 43, 0.9) 0%,
+      rgba(21, 11, 43, 0) 100%
+    ),
+    url("../assets/md.png") no-repeat; /* Change the image path accordingly */
+  background-position: center;
+  background-size: cover;
 }
 .slide3 {
-  background-image: url("../assets/modern.png");
+  background: linear-gradient(
+      0deg,
+      rgba(21, 11, 43, 0.9) 0%,
+      rgba(21, 11, 43, 0) 100%
+    ),
+    url("../assets/modern.png") no-repeat; /* Change the image path accordingly */
+  background-position: center;
+  background-size: cover;
 }

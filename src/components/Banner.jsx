@@ -38,7 +38,7 @@ export default function App() {
       >
         <SwiperSlide className=''>
           <div className='slide1 h-[500px] w-full slide'>
-            <div>
+            <div className='space-y-2'>
                     <h1 className='text-5xl text-white'>Building More Than Your Dream Home</h1>
             <p className='text-white'>We make sure that everyone finds what they are looking for...</p>
            <Button
@@ -53,7 +53,7 @@ export default function App() {
         </SwiperSlide>
         <SwiperSlide className=''>
           <div className='slide2 h-[500px] w-full slide'>
-            <div>
+            <div className='space-y-2'>
                     <h1 className='text-5xl text-white'>Building More Than Your Dream Home</h1>
             <p className='text-white'>We make sure that everyone finds what they are looking for...</p>
            <Button
@@ -68,7 +68,7 @@ export default function App() {
         </SwiperSlide>
         <SwiperSlide className=''>
           <div className='slide3 h-[500px] w-full slide'>
-            <div>
+            <div className='space-y-2'>
                     <h1 className='text-5xl text-white'>Building More Than Your Dream Home</h1>
             <p className='text-white'>We make sure that everyone finds what they are looking for...</p>
            <Button
