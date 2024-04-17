@@ -9,7 +9,8 @@
       "status": "sale",
       "area": "3500 sq ft",
       "location": "816 Shadyridge Drive Cedar Hill, TX 75104",
-      "facilities": ["4 bedrooms", "3 bathrooms", "Backyard", "Garage"]
+      "facilities": ["4 bedrooms", "3 bathrooms", "Backyard", "Garage"],
+      "geocode":[32.602010,-96.983690]
   
     },
     {
@@ -22,8 +23,8 @@
       "status": "sale",
       "area": "2000 sq ft",
       "location": "123 Main St, Cityville, USA",
-      "facilities": ["3 bedrooms", "2 bathrooms", "Balcony", "Parking"]
-   
+      "facilities": ["3 bedrooms", "2 bathrooms", "Balcony", "Parking"],
+      "geocode":[34.093185,-117.622754]
     },
     {
       "id": 3,
@@ -35,8 +36,8 @@
       "status": "rent",
       "area": "1500 sq ft",
       "location": "555 Sunny Lane, Family Town, USA",
-      "facilities": ["2 bedrooms", "2 bathrooms", "Gym", "Swimming Pool"]
-     
+      "facilities": ["2 bedrooms", "2 bathrooms", "Gym", "Swimming Pool"],
+        "geocode":[40.28986, -86.5196]
     },
     {
       "id": 4,
@@ -48,7 +49,8 @@
       "status": "rent",
       "area": "1000 sq ft",
       "location": "789 Maple St, Suburbia, USA",
-      "facilities": ["Individual bedrooms", "Common kitchen", "Study rooms", "1 bathroom"]
+      "facilities": ["Individual bedrooms", "Common kitchen", "Study rooms", "1 bathroom"],
+         "geocode":[38.89036,-77.03196]
    
     },
     {
@@ -61,7 +63,8 @@
       "status": "rent",
       "area": "1800 sq ft",
       "location": "101 University Ave, College Town, USA",
-      "facilities": ["24/7 nursing care", "Social activities", "Dining facilities"]
+      "facilities": ["24/7 nursing care", "Social activities", "Dining facilities"],
+         "geocode":[37.72174,-89.2179]
 
     },
     {
@@ -74,7 +77,8 @@
       "status": "rent",
       "area": "3000 sq ft",
       "location": "321 Elderly Dr, Retirement City, USA",
-      "facilities": ["Private pool", "Ocean view terrace", "Fully equipped kitchen"]
+      "facilities": ["Private pool", "Ocean view terrace", "Fully equipped kitchen"],
+         "geocode":[35.110580,-80.855770]
  
     },
     {
@@ -87,7 +91,8 @@
       "status": "sale",
       "area": "2800 sq ft",
       "location": "456 Downtown Ave, Metropolis, USA",
-      "facilities": ["3 bedrooms", "2 bathrooms", "Garden", "Fireplace"]
+      "facilities": ["3 bedrooms", "2 bathrooms", "Garden", "Fireplace"],
+         "geocode":[43.654840,-94.462380]
   
     },
     {
@@ -100,7 +105,8 @@
       "status": "rent",
       "area": "1200 sq ft",
       "location": "789 Maple St, Suburbia, USA",
-      "facilities": ["1 bedroom", "1 bathroom", "Fitness center", "Rooftop terrace"]
+      "facilities": ["1 bedroom", "1 bathroom", "Fitness center", "Rooftop terrace"],
+         "geocode":[38.978990,-95.219340]
    
     },
     {
@@ -113,7 +119,8 @@
       "status": "rent",
       "area": "2500 sq ft",
       "location": "777 Ocean Blvd, Paradise Beach, USA",
-      "facilities": ["Hot tub", "Ski-in/ski-out access", "Fireplace"]
+      "facilities": ["Hot tub", "Ski-in/ski-out access", "Fireplace"],
+         "geocode":[33.908640,-78.324150]
     }
   
 

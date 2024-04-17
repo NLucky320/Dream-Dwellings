@@ -21,3 +21,4 @@ https://voluble-syrniki-eda867.netlify.app
 - [AOS Packages](https://michalsnik.github.io/aos/)
 - [React Hook Form](https://react-hook-form.com/)
 - [Swiper Slider](https://swiperjs.com/)
+- [React leaflet](https://react-leaflet.js.org/)

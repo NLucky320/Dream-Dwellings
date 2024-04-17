@@ -5,6 +5,8 @@ import { FaChartArea } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaCheckCircle } from "react-icons/fa";
 import { IoPricetags } from "react-icons/io5";
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import "leaflet/dist/leaflet.css";
 import {
   Card,
   CardHeader,
@@ -12,50 +14,58 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { Helmet } from 'react-helmet-async';
-import image1 from '../assets/shutterstock_1495957673.png'
+import image1 from '../assets/shutterstock_1495957673.png';
+import Loading from '../components/Loading';
+
 const EstatesDetails = () => {
-     const [estate, setEstate] = useState([]);
-    const { data } = useEstatesData();
-      const { id } = useParams();
-    useEffect(() => {
-         const estate = data.find((item) => item.id == id);
-        setEstate(estate)
-    },[data, id])
-// console.log(data)
-   const {
+  const [estate, setEstate] = useState(null);
+  const { data } = useEstatesData();
+  const { id } = useParams();
+
+  useEffect(() => {
+    const selectedEstate = data.find(item => item.id === parseInt(id));
+    setEstate(selectedEstate);
+  }, [data, id]);
+
+  if (!estate) {
+    return <Loading></Loading>;
+  }
+
+  const {
     image,
-   estate_title,
-       segment_name,
-       description,
-       price,
-       status,
-       area,
-       location,
-       facilities
-   
-  } = estate|| {};
-    return (
-      <section className='mt-12 md:mt-[80px]'>
-         <Helmet>
-              <title>Dream Dwellings | Property details</title>  
-        </Helmet>
-        <div className='w-full '>
-<div className="bg-cover rounded-[24px]" style={{
-        backgroundImage: `linear-gradient(0deg, rgba(21, 11, 43, 0.90) 0%, rgba(21, 11, 43, 0.00) 100%), url("${image1}")`,
-      }}>
-        <div className="hero-content text-center text-neutral-content">
-          <div className="md:py-[50px] lg:py-[114px] p-6">
-            <h1 className="mb-5 md:text-[36px] lg:text-[44px] font-bold text-[#FFFFFF] lg:w-[897px] mx-auto">Discover a place you will love to live</h1>
-            <p className="mb-10 md:text-[18px] lg:w-[933px] mx-auto text-white">A knowledgeable real estate agent can be your greatest asset. They will help you navigate the market, find suitable properties, and negotiate on your behalf.</p>
+    estate_title,
+    segment_name,
+    description,
+    price,
+    status,
+    area,
+    location,
+    facilities,
+    geocode
+  } = estate;
+
+  return (
+    <section className='mt-12 md:mt-[80px] mx-auto'>
+      <Helmet>
+        <title>Dream Dwellings | Property details</title>
+      </Helmet>
+      <div className='w-full '>
+        <div className="bg-cover rounded-[24px]" style={{
+          backgroundImage: `linear-gradient(0deg, rgba(21, 11, 43, 0.90) 0%, rgba(21, 11, 43, 0.00) 100%), url("${image1}")`,
+        }}>
+          <div className="hero-content text-center text-neutral-content">
+            <div className="md:py-[50px] lg:py-[114px] p-6">
+              <h1 className="mb-5 md:text-[36px] lg:text-[44px] font-bold text-[#FFFFFF] lg:w-[897px] mx-auto">Discover a place you will love to live</h1>
+              <p className="mb-10 md:text-[18px] lg:w-[933px] mx-auto text-white">A knowledgeable real estate agent can be your greatest asset. They will help you navigate the market, find suitable properties, and negotiate on your behalf.</p>
+            </div>
           </div>
         </div>
       </div>
-        </div>
-          <div className='pt-12 max-w-[700px] mx-auto text-center'>
-          <h2 className='text-4xl pb-4'>Estate Details</h2>
-          <p>Discover a lifestyle of unparalleled comfort and sophistication within our meticulously designed homes, crafted to exceed the highest standards of quality and elegance. </p>
-  </div>
-         <Card className="w-full flex-col items-center lg:flex-row my-[50px] gap-4 p-4">
+      <div className='pt-12 max-w-[700px] mx-auto text-center'>
+        <h2 className='text-4xl pb-4'>Estate Details</h2>
+        <p>Discover a lifestyle of unparalleled comfort and sophistication within our meticulously designed homes, crafted to exceed the highest standards of quality and elegance. </p>
+      </div>
+      <Card className="w-full flex-col items-center lg:flex-row my-[50px] gap-4 p-4">
         
      
             <CardHeader
@@ -147,9 +157,23 @@ const EstatesDetails = () => {
         </Typography>
     
       </CardBody>
-    </Card>
-      </section>
-    );
+        </Card>
+      <div>
+        <h2 className='text-2xl text-center py-4 font-bold'>Property Location on Map</h2>
+        <MapContainer center={geocode} zoom={13} className='h-[500px]'>
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={geocode}>
+            <Popup>
+              {location}
+            </Popup>
+          </Marker>
+        </MapContainer>
+      </div>
+    </section>
+  );
 };
 
 export default EstatesDetails;
