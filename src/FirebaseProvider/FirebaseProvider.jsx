@@ -44,7 +44,7 @@ const FirebaseProvider = ({ children }) => {
     const logOut = () => {
         toast('logged out')
         setUser(null)
-             setLoading(true)
+             setLoading(false)
         signOut(auth)
         Navigate('/')
     }
@@ -71,7 +71,7 @@ const FirebaseProvider = ({ children }) => {
                 setUser(user)
                  setLoading(false)
             }   
-           
+           setLoading(false)
         })
         return () => unsubscribe();
     },[])

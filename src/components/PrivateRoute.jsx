@@ -1,21 +1,22 @@
 import React from 'react';
 import useAuth from '../Hooks/useAuth';
 import { Navigate, useLocation } from 'react-router-dom';
-
+import Loading from './Loading';
 
 const PrivateRoute = ({ children }) => {
     const { user, loading } = useAuth();
-   const location = useLocation();
-    console.log(location.pathname)
-    if (loading) {
-    return <span className="loading loading-spinner text-primary"></span>
-}
+    const location = useLocation();
 
+    if (loading) {
+        return <Loading />;
+    }
 
     if (user) {
         return children;
-}
-return <Navigate state={location?.pathname} to='/login'> </Navigate>
- 
+    }
+
+    // Redirect to login page if user is not logged in
+    return <Navigate to="/login" state={{ from: location?.pathname }} />;
 };
+
 export default PrivateRoute;
