@@ -4,6 +4,7 @@ import {
   MobileNav,
   Typography,
   IconButton,
+  button,
 
 } from "@material-tailwind/react";
 import { Link, NavLink, Navigate } from "react-router-dom";
@@ -94,13 +95,10 @@ const Nav = () => {
         Dream Dwellings
           </Typography>
           <div className="flex items-center gap-4">
-            <div className="mr-4 hidden lg:block">{navList}</div>
-            <div className="flex items-center gap-x-2">
-               {
-                  user ? 
-                    <div className="dropdown dropdown-hover">
-                            <label tabIndex={0} className="btn mt-4 btn-circle avatar ">
-                                <div className="w-10 rounded-full">
+              <div className="mr-4 hidden lg:block">{navList}</div>
+                {user?<div className="dropdown dropdown-hover">
+                            <label tabIndex={0} className="btn btn-circle avatar ">
+                                <div className="w-12 rounded-full">
                                     <img src={user?.photoURL || "" } className=""/>
                                 </div>
                             </label>
@@ -108,15 +106,22 @@ const Nav = () => {
                                 <li>
                                     <button className="btn  bg-[#23BE0A] text-white rounded">{user?.displayName||'user name not found'}</button>
 
-                        </li></ul>
+                    </li></ul></div> : 
+                         <button ></button>
+                        }
+          
+               {
+                  user ? 
+                    
                         <button onClick={handleSignOut} className="btn bg-[#23BE0A] text-white rounded "> SignOut</button>
                      
-                    </div>
+                    
                     : <Link to="/login">
           <button className="btn bg-[#23BE0A] text-white rounded ">Login</button>
         </Link>
-        }
-            </div>
+                }
+              
+            
             <IconButton
               variant="text"
               className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
