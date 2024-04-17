@@ -27,11 +27,11 @@ const Login = () => {
                 } else {
                     toast.error('Invalid email or password');
                 }
-                     toast('Logging in...');
+                     toast.success('Logged  in successfully');
             })
             .catch((error) => {
                 console.error(error.message);
-                toast.error('An error occurred while logging in');
+                toast.error('Invalid email or password');
             });
     };
 

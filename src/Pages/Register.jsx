@@ -27,7 +27,7 @@ const Register = () => {
                 updateUserProfile(yourName, photoURL)
                     .then(() => {
                         navigate(from);
-                        toast('Registered successfully');
+                        toast.success('Registered successfully');
                     })
                     .catch((error) => {
                         console.log(error.message);

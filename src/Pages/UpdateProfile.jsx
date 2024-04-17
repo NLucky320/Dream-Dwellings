@@ -31,13 +31,14 @@ const UpdaterProfile = () => {
         updateUserProfile(formData.name, formData.photoURL)
             .then(() => {
                 console.log('Profile updated successfully');
-                toast('profile updated')
+                
                 // Optionally, you can navigate the user to a different page or show a success message here
             })
             .catch((error) => {
                 console.error('Error updating profile:', error.message);
                 // Optionally, you can show an error message to the user
             });
+        toast.success('profile updated')
     };
 
     return (

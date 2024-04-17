@@ -35,12 +35,21 @@ const EstatesDetails = () => {
    
   } = estate|| {};
     return (
-      <section>
+      <section className='mt-12 md:mt-[80px]'>
          <Helmet>
               <title>Dream Dwellings | Property details</title>  
         </Helmet>
-        <div className='w-full  mt-[80px]'>
-<img src={image1} alt="" />
+        <div className='w-full '>
+<div className="bg-cover rounded-[24px]" style={{
+        backgroundImage: `linear-gradient(0deg, rgba(21, 11, 43, 0.90) 0%, rgba(21, 11, 43, 0.00) 100%), url("${image1}")`,
+      }}>
+        <div className="hero-content text-center text-neutral-content">
+          <div className="md:py-[50px] lg:py-[114px] p-6">
+            <h1 className="mb-5 md:text-[36px] lg:text-[52px] font-bold text-[#FFFFFF] lg:w-[897px] mx-auto">A sure way to get your dream home</h1>
+            <p className="mb-10 md:text-[18px] lg:w-[933px] mx-auto text-white">A knowledgeable real estate agent can be your greatest asset. They will help you navigate the market, find suitable properties, and negotiate on your behalf.</p>
+          </div>
+        </div>
+      </div>
         </div>
           <div className='pt-12 max-w-[700px] mx-auto text-center'>
           <h2 className='text-4xl pb-4'>Estate Details</h2>
