@@ -42,7 +42,7 @@ const UpdaterProfile = () => {
     };
 
     return (
-        <section className="py-6 dark:bg-gray-100 dark:text-gray-800">
+        <section className="py-6 dark:bg-gray-100 dark:text-gray-800 mt-12 md:mt-[80px]">
             <Helmet>
                 <title>Dream Dwellings | Update Profile</title>
             </Helmet>
