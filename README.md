@@ -13,6 +13,7 @@ https://voluble-syrniki-eda867.netlify.app
 - Efficient state updating within arrays and parameter passing
 - Integration of toast notifications for successful operations and error messages
 - Dynamic routes using React Router for navigation flexibility
+- Integration of private route
 - Firebase Authentication
 
 ### NPM packages that was used
