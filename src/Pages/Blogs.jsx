@@ -24,7 +24,7 @@ const Blogs = () => {
       }}>
         <div className="hero-content text-center text-neutral-content">
           <div className="md:py-[50px] lg:py-[114px] p-6">
-            <h1 className="mb-5 md:text-[36px] lg:text-[52px] font-bold text-[#FFFFFF] lg:w-[897px] mx-auto">A sure way to get your dream home</h1>
+            <h1 className="mb-5 md:text-[36px] lg:text-[44px] font-bold text-[#FFFFFF] lg:w-[897px] mx-auto">A sure way to get your dream home</h1>
             <p className="mb-10 md:text-[18px] lg:w-[933px] mx-auto text-white">A knowledgeable real estate agent can be your greatest asset. They will help you navigate the market, find suitable properties, and negotiate on your behalf.</p>
           </div>
         </div>
