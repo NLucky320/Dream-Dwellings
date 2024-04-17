@@ -6,7 +6,7 @@ import {
   IconButton,
 
 } from "@material-tailwind/react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, Navigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 
 const Nav = () => {
@@ -21,7 +21,8 @@ const Nav = () => {
     })
       .catch(error => {
       console.log(error)
-    })
+      })
+     Navigate('/')
   }
   React.useEffect(() => {
     window.addEventListener(

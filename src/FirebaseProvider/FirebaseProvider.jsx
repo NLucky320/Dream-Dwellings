@@ -44,7 +44,7 @@ const FirebaseProvider = ({ children }) => {
     const logOut = () => {
         toast.success('Log out successfully')
         setUser(null)
-             setLoading(false)
+        setLoading(false)
         signOut(auth)
         Navigate('/')
     }
