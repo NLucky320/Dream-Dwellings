@@ -2,7 +2,7 @@
 
 ## Live Link
 
--[Firebase](https://assignment-nine-f0f49.web.app)
+https://assignment-nine-f0f49.web.app
 
 https://voluble-syrniki-eda867.netlify.app
 
