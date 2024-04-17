@@ -98,10 +98,10 @@ const Nav = () => {
             <div className="flex items-center gap-x-2">
                {
                   user ? 
-                    <div className="dropdown dropdown-end">
-                            <label tabIndex={0} className="btn btn-circle avatar ">
-                                <div className="w-10 rounded-full">
-                                    <img src={user?.photoURL || "" } />
+                    <div className="dropdown dropdown-hover">
+                            <label tabIndex={0} className="btn mt-4 btn-circle avatar ">
+                                <div className="w-12 rounded-full">
+                                    <img src={user?.photoURL || "" } className=""/>
                                 </div>
                             </label>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
@@ -109,38 +109,13 @@ const Nav = () => {
                                     <button className="btn  bg-[#23BE0A] text-white rounded">{user?.displayName||'user name not found'}</button>
 
                         </li></ul>
-                        <button onClick={handleSignOut} className="btn bg-[#23BE0A] text-white rounded"> SignOut</button>
+                        <button onClick={handleSignOut} className="btn bg-[#23BE0A] text-white rounded "> SignOut</button>
                      
                     </div>
                     : <Link to="/login">
           <button className="btn bg-[#23BE0A] text-white rounded ">Login</button>
         </Link>
         }
-                    {/* {
-                        user? <div className="dropdown dropdown-end">
-                            <label tabIndex={0} className="btn  btn-circle avatar">
-                                <div className="w-10 rounded-full">
-                                    <img src={user?.photoURL || "" } />
-                                </div>
-                            </label>
-                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                                <li>
-                                    <button className="btn  bg-[#23BE0A] text-white rounded">{user?.displayName||'user name not found'}</button>
-
-                                </li>
-                      <li>
-                                    <button
-                                        onClick={logOut}
-                                        className="btn  bg-[#23BE0A] text-white rounded">Logout</button>
-
-                                </li>
-                            </ul>
-                        </div>
-                            :
-                            <Link to='/login'>
-                                <button className="btn bg-[#23BE0A] text-white rounded">Login</button>
-                            </Link>
-                    } */}
             </div>
             <IconButton
               variant="text"
