@@ -19,6 +19,5 @@ https://voluble-syrniki-eda867.netlify.app
 ### NPM packages that was used
 
 - [AOS Packages](https://michalsnik.github.io/aos/)
-
-- React Hook Form
-- Swiper Slider
+- [React Hook Form](https://react-hook-form.com/)
+- [Swiper Slider](https://swiperjs.com/)
