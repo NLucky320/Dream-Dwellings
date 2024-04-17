@@ -2,6 +2,9 @@
 
 ## Live Link
 
+https://assignment-nine-f0f49.web.app
+https://voluble-syrniki-eda867.netlify.app
+
 Features and Characteristics
 
 - Custom JSON file containing personalized data
