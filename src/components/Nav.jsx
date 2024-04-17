@@ -10,7 +10,7 @@ import { Link, NavLink } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 
 const Nav = () => {
-  const { logOut, user } = useAuth();
+  const { logOut, user} = useAuth(); 
   console.log(user)
 // console.log(user)
   const [openNav, setOpenNav] = React.useState(false);
@@ -23,14 +23,13 @@ const Nav = () => {
       console.log(error)
     })
   }
-
   React.useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false),
     );
   }, []);
- 
+
   const navList = (
     <ul className="mt-2 mb-4 pl-4 lg:pr-12 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
@@ -100,11 +99,11 @@ const Nav = () => {
                   user ? 
                     <div className="dropdown dropdown-hover">
                             <label tabIndex={0} className="btn mt-4 btn-circle avatar ">
-                                <div className="w-12 rounded-full">
+                                <div className="w-10 rounded-full">
                                     <img src={user?.photoURL || "" } className=""/>
                                 </div>
                             </label>
-                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-1 z-[1] pr-10 mr-4 rounded-box w-52">
                                 <li>
                                     <button className="btn  bg-[#23BE0A] text-white rounded">{user?.displayName||'user name not found'}</button>
 

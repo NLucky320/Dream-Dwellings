@@ -89,7 +89,7 @@ const UpdaterProfile = () => {
                             />
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn bg-[#23BE0A] text-white rounded">Update Profile</button>
+                            <button className="btn bg-[#23BE0A] text-white rounded">Save Changes</button>
                         </div>
                     </form>
                 </div>

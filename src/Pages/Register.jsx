@@ -6,7 +6,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
-    const { createUser } = useAuth();
+    const { createUser, updateUserProfile } = useAuth();
     const navigate = useNavigate();
     const from = '/';
 
@@ -19,12 +19,18 @@ const Register = () => {
     } = useForm();
 
     const onSubmit = (data) => {
-        const { email, password } = data;
+        const { email, password, yourName, photoURL } = data;
         createUser(email, password)
             .then(() => {
-                    navigate(from);
-                    toast('Registered successfully');
-                
+                // Register successful, update user profile
+                updateUserProfile(yourName, photoURL)
+                    .then(() => {
+                        navigate(from);
+                        toast('Registered successfully');
+                    })
+                    .catch((error) => {
+                        console.log(error.message);
+                    });
             })
             .catch((error) => {
                 console.log(error.message);
