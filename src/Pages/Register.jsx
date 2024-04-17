@@ -4,7 +4,8 @@ import { useForm } from 'react-hook-form';
 import useAuth from '../Hooks/useAuth';
 import toast, { Toaster } from 'react-hot-toast';
 import { Helmet } from 'react-helmet-async';
-
+import { FaEye } from "react-icons/fa";
+import { IoMdEyeOff } from "react-icons/io";
 const Register = () => {
     const { createUser, updateUserProfile } = useAuth();
     const navigate = useNavigate();
@@ -106,41 +107,9 @@ const Register = () => {
                             onClick={() => setShowPassword(!showPassword)}
                         >
                             {showPassword ? (
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-6 w-6 text-gray-500 hover:text-gray-700 cursor-pointer"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                                    />
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                                    />
-                                </svg>
+                               <FaEye />
                             ) : (
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-6 w-6 text-gray-500 hover:text-gray-700 cursor-pointer"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M19 9l-7 7-7-7"
-                                    />
-                                </svg>
+                               <IoMdEyeOff />
                             )}
                         </button>
                     </div>
