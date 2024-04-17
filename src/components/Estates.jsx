@@ -11,7 +11,7 @@ const Estates = () => {
     },[data])
     return (
         <div>
-             <div className="p-4 mt-6 md:my-[70px] text-center"> 
+             <div className="p-4 mt-12 md:mt-[80px] text-center"> 
                 <div className='max-w-[700px] mx-auto pb-6'>
                     <h2 className="font-bold text-[40px] pb-6">Estates</h2>
                 <p>Discover a lifestyle of unparalleled comfort and sophistication within our meticulously designed homes, crafted to exceed the highest standards of quality and elegance. </p>
