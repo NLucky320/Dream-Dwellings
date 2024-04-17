@@ -6,7 +6,7 @@ https://assignment-nine-f0f49.web.app
 
 https://voluble-syrniki-eda867.netlify.app
 
-Features and Characteristics
+### Features and Characteristics
 
 - Custom JSON file containing personalized data
 - Use of the useEffect hook for fetching data from an API
@@ -15,7 +15,7 @@ Features and Characteristics
 - Dynamic routes using React Router for navigation flexibility
 - Firebase Authentication
 
-NPM packages that was used
+### NPM packages that was used
 
 - AOS Packages
 - React Hook Form
