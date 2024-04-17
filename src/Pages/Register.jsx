@@ -94,7 +94,7 @@ const Register = () => {
                             type={showPassword ? 'text' : 'password'}
                             placeholder="Password"
                             name="password"
-                            className="input input-bordered pr-12"
+                            className="input input-bordered pr-12 w-full"
                             {...register('password', {
                                 required: true,
                                 minLength: 6,
