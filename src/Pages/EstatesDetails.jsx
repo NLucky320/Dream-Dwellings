@@ -168,7 +168,7 @@ const EstatesDetails = () => {
           />
           <Marker position={geocode}>
             <Popup>
-             <span>A pretty CSS3 popup. <br/> Easily customizable.</span>
+           {location}
             </Popup>
           </Marker>
         </MapContainer>
