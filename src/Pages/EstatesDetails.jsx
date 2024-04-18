@@ -160,7 +160,8 @@ const EstatesDetails = () => {
         </Card>
       <div>
         <h2 className='text-2xl text-center py-4 font-bold'>Property Location on Map</h2>
-        <MapContainer center={geocode} zoom={13} className='h-[500px]'>
+        <div  className='h-[500px]'>
+           <MapContainer center={geocode} zoom={13} className='h-full' scrollWheelZoom={false}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -171,6 +172,7 @@ const EstatesDetails = () => {
             </Popup>
           </Marker>
         </MapContainer>
+        </div>
       </div>
     </section>
   );
