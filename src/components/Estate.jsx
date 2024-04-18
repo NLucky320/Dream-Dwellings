@@ -14,7 +14,7 @@ const Estate = ({ estate }) => {
           <img src={estate.image} alt="Shoes" className="rounded-xl h-full w-full items-center text-center" />
         </figure>
         </div>
-          <h2 className="text-[24px] font-bold py-2 text-nowrap overflow-hidden text-ellipsis">{estate.estate_title} </h2>
+          <h2 className="text-[18px] md:text-[24px] font-bold py-2 text-nowrap overflow-hidden text-ellipsis">{estate.estate_title} </h2>
             <div className='flex justify-between'>
                 <div >
                      <p className="font-medium text-[#131313CC] border-b border-dashed pb-2">Type: {estate.segment_name} </p>
